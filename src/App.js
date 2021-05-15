@@ -1,9 +1,18 @@
 import "./App.css";
+import React from "react";
+import LineChart from "./component/LineChart";
+import BarChart from "./component/BarChart";
+import DoughnutChart from "./component/DoughnutChart";
 
+//*************Datepicker****************************/
+// import React, { useState } from "react";
+// import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
 
-import React, { useState } from "react";
-import Cards from "react-credit-cards";
-import "react-credit-cards/es/styles-compiled.css";
+//*************Credit Cards**********************/
+// import React, { useState } from "react";
+// import Cards from "react-credit-cards";
+// import "react-credit-cards/es/styles-compiled.css";
 
 //**************Color Picker*************************/
 // import React, { useState } from "react";
@@ -231,56 +240,91 @@ import "react-credit-cards/es/styles-compiled.css";
 // }
 // export default App;
 
+//*************Credit Cards**********************/
+// function App() {
+//   const [number, setNumber] = useState("");
+//   const [name, setName] = useState("");
+//   const [expiry, setExpiry] = useState("");
+//   const [cvc, setCvc] = useState("");
+//   const [focus, setFocus] = useState("");
+//   return (
+//     <div className="App">
+//     <Cards
+//       number={number}
+//       name={name}
+//       expiry={expiry}
+//       cvc={cvc}
+//       focused={focus}
+//     />
+//       <form>
+//         <input
+//           type="tel"
+//           name="number"
+//           placeholder="Card Number"
+//           maxLength='16'
+//           value={number}
+//           onChange={(e) => setNumber(e.target.value)}
+//           onFocus={(e) => setFocus(e.target.name)}
+//         />
+//         <input
+//           type="text"
+//           name="name"
+//           placeholder="Name"
+//           value={name}
+//           onChange={(e) => setName(e.target.value)}
+//           onFocus={(e) => setFocus(e.target.name)}
+//         />
+//         <input
+//           type="text"
+//           name="expiry"
+//           placeholder="MM/YY Expiry"
+//           value={expiry}
+//           onChange={(e) => setExpiry(e.target.value)}
+//           onFocus={(e) => setFocus(e.target.name)}
+//         />
+//         <input
+//           type="tel"
+//           name="cvc"
+//           placeholder="CVC"
+//           value={cvc}
+//           onChange={(e) => setCvc(e.target.value)}
+//           onFocus={(e) => setFocus(e.target.name)}
+//         />
+//       </form>
+//     </div>
+//   );
+// }
+// export default App;
+
+//*************Datepicker****************************/
+// function App() {
+//   const [selectedDate, setSelectedDate] = useState(null);
+//   return (
+//     <div className="App">
+//       <DatePicker
+//         selected={selectedDate}
+//         onChange={(date) => setSelectedDate(date)}
+//         dateFormat='dd/MM/yyyy'
+//         filterDate={date => date.getDay() !== 6 && date.getDay() !== 0}
+//         isClearable
+//         showYearDropdown
+//         scrollableMonthYearDropdown
+//         // minDate={new Date()}
+//         // maxDate={new Date()}
+//       />
+//     </div>
+//   );
+// }
+// export default App;
+
 function App() {
-  const [number, setNumber] = useState("");
-  const [name, setName] = useState("");
-  const [expiry, setExpiry] = useState("");
-  const [cvc, setCvc] = useState("");
-  const [focus, setFocus] = useState("");
   return (
     <div className="App">
-    <Cards 
-      number={number}
-      name={name}
-      expiry={expiry}
-      cvc={cvc}
-      focused={focus}
-    />
-      <form>
-        <input
-          type="tel"
-          name="number"
-          placeholder="Card Number"
-          maxLength='16'
-          value={number}
-          onChange={(e) => setNumber(e.target.value)}
-          onFocus={(e) => setFocus(e.target.name)}
-        />
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          onFocus={(e) => setFocus(e.target.name)}
-        />
-        <input
-          type="text"
-          name="expiry"
-          placeholder="MM/YY Expiry"
-          value={expiry}
-          onChange={(e) => setExpiry(e.target.value)}
-          onFocus={(e) => setFocus(e.target.name)}
-        />
-        <input
-          type="tel"
-          name="cvc"
-          placeholder="CVC"
-          value={cvc}
-          onChange={(e) => setCvc(e.target.value)}
-          onFocus={(e) => setFocus(e.target.name)}
-        />
-      </form>
+      <div className="chart">
+        {/* <LineChart /> */}
+        {/* <BarChart /> */}
+        <DoughnutChart />
+      </div>
     </div>
   );
 }
